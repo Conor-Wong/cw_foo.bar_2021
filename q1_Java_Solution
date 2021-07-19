@@ -1,0 +1,15 @@
+public class Solution {
+    public static int solution(int[] x, int[] y) {
+        // Your code here
+        
+        Set <Integer> x1 = new HashSet<Integer>(x);
+        Set <Integer>y1 = new HashSet<Integer>(y);
+        if (len(x1)>len(y1)){
+            x1.removeAll(y1);
+            return x1.iterator().next();
+        }else{
+            y1.removeAll(x1);
+            return y1.iterator().next();
+        }
+    }   
+}
